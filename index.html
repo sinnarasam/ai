@@ -1,1 +1,103 @@
-<!DOCTYPE html><html style="height: 100%;"><body style="height: 100%; margin: 100;"><iframe src="https://copilotstudio.microsoft.com/environments/Default-b191802e-6d1f-456c-af2d-ebd2ab881e8e/bots/nara_multimodelaiagent_vb2GGk/webchat?__version__=2&enableFileAttachment=false&cliAgent=true" frameborder="1" style="width: 90%; height: 90%; border: 0;"></iframe></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Copilot Studio Chat</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
+          sans-serif;
+        background: radial-gradient(circle at top, #f5f7ff 0%, #edf1ff 45%, #e7ecff 100%);
+        color: #1f2937;
+      }
+
+      .page {
+        min-height: 100vh;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .app-shell {
+        width: min(1100px, 100%);
+        height: min(88vh, 860px);
+        min-height: 560px;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        box-shadow: 0 20px 48px rgba(31, 41, 55, 0.16);
+        overflow: hidden;
+        backdrop-filter: blur(4px);
+      }
+
+      .app-header {
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid #e5e7eb;
+        background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+      }
+
+      .brand {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+
+      .chat-frame {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        background: #fff;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          padding: 0.5rem;
+        }
+
+        .app-shell {
+          width: 100%;
+          height: calc(100vh - 1rem);
+          min-height: 0;
+          border-radius: 14px;
+        }
+
+        .app-header {
+          padding: 0.85rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="app-shell" aria-label="Copilot Studio chat application">
+        <header class="app-header">
+          <h1 class="brand">Microsoft Copilot Studio</h1>
+        </header>
+        <iframe
+          class="chat-frame"
+          src="https://copilotstudio.microsoft.com/environments/Default-b191802e-6d1f-456c-af2d-ebd2ab881e8e/bots/nara_multimodelaiagent_vb2GGk/webchat?__version__=2&enableFileAttachment=false&cliAgent=true"
+          title="Microsoft Copilot Studio chat"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="clipboard-write"
+        ></iframe>
+      </section>
+    </main>
+  </body>
+</html>
